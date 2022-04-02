@@ -146,7 +146,7 @@ export function setRepeatAudio(audio) {
     repeatAudio = audio;
 }
 
-export function startRepeatAudio(pastTime = 3000, intervalTime = 10000) {
+export function startRepeatAudio(pastTime = 5000, intervalTime = 10000) {
 
     clearTimeout(repeartTimer)
     clearInterval(repeatInterval)
