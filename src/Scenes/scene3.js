@@ -689,14 +689,17 @@ export default function Scene({ _geo, nextFunc, _baseGeo, gameNumber }) {
                                 , left: _baseGeo.left + _baseGeo.width * 0.46 + "px",
                                 top: _baseGeo.top + _baseGeo.height * 0.42 + "px",
                                 cursor: 'grab',
-                                transform: 'scale(' + (currentCharacter != null && currentCharacter.includes('Cheetah') ? 0.9 : 1) + '1'
+                                transform: 'scale(' + (currentCharacter != null && currentCharacter.includes('Cheetah') ? 0.8 : 1) + ")"
 
                             }}>
                             {currentCharacter != null &&
                                 <BaseImage
                                     ref={dragCharacterRef}
-                                    scale={1.9}
-                                    posInfo={{ l: -0.45, t: -1 }}
+                                    scale={currentCharacter != null && currentCharacter.includes('Cheetah') ? 1.7 : 1.9}
+                                    posInfo={{
+                                        l: currentCharacter != null && currentCharacter.includes('Cheetah') ? -0.35 : -0.45,
+                                        t: currentCharacter != null && currentCharacter.includes('Cheetah') ? -0.8 : -1
+                                    }}
                                     url={"SB_37_Character-Interactive/" + currentCharacter.slice(0, currentCharacter.length - 1) + "1.svg"}
                                 />
                             }
