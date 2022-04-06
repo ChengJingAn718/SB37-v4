@@ -126,7 +126,6 @@ export default function Scene({ _geo, nextFunc, _baseGeo, gameNumber }) {
             audioList.bodyAudio1.play().catch(error => { });
             startRepeatAudio();
             timerList[1] = setTimeout(() => {
-
                 audioList.repeatAudio.play();
                 timerList[2] = setTimeout(() => {
                     baseObject.current.style.pointerEvents = ''
