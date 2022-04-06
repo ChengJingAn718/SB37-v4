@@ -697,15 +697,17 @@ export default function Scene({ _geo, nextFunc, _baseGeo, gameNumber }) {
                                 // background:'black',
                                 cursor: 'grab',
                             }}>
-                            <BaseImage
-                                ref={dragCharacterRef}
-                                scale={currentCharacter != null && currentCharacter.includes('Cheetah') ? 0.85 : 0.95}
-                                posInfo={{
-                                    l: currentCharacter != null && currentCharacter.includes('Cheetah') ? 0.05 : 0.0,
-                                    t: currentCharacter != null && currentCharacter.includes('Cheetah') ? 0.1 : 0
-                                }}
-                                url={"SB_37_Character-Interactive/" + currentCharacter.slice(0, currentCharacter.length - 1) + "1.svg"}
-                            />
+                            {currentCharacter != null &&
+                                <BaseImage
+                                    ref={dragCharacterRef}
+                                    scale={currentCharacter != null && currentCharacter.includes('Cheetah') ? 0.85 : 0.95}
+                                    posInfo={{
+                                        l: currentCharacter != null && currentCharacter.includes('Cheetah') ? 0.05 : 0.0,
+                                        t: currentCharacter != null && currentCharacter.includes('Cheetah') ? 0.1 : 0
+                                    }}
+                                    url={"SB_37_Character-Interactive/" + currentCharacter.slice(0, currentCharacter.length - 1) + "1.svg"}
+                                />
+                            }
                         </div>
                     </Draggable>
                 }
