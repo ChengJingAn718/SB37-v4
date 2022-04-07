@@ -82,11 +82,14 @@ const MusicButton = React.forwardRef((prop, ref) => {
                 prop.backAudio.currentTime = 0;
                 prop.backAudio.play().catch(error => { });
                 _setBackgroundPlaying(true);
-                
+
             }, 500);
             setTimeout(() => {
                 currentRef.current.className = 'commonButton'
             }, 2000);
+        },
+        setClass: (prop) => {
+            currentRef.current.className = prop
         }
     }
     ))
